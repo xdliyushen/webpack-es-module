@@ -1,0 +1,34 @@
+{
+  "name": "script-module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "core-js": "2",
+    "css-loader": "^5.0.1",
+    "handlebars": "^4.7.6",
+    "html-webpack-plugin": "^5.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "metalsmith": "^2.3.0",
+    "react": "16",
+    "react-dom": "16",
+    "rimraf": "^3.0.2",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "clean": "rimraf ./public",
+    "build": "npm run clean && webpack --config ./webpack/es5.webpack.config.js && webpack --config ./webpack/es6.webpack.config.js && node ./command/build"
+  }
+}
